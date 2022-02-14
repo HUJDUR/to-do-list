@@ -1,0 +1,110 @@
+.application {
+	display: flex;
+	position: fixed;
+	z-index: 5;
+	align-items: center;
+	height: 80vh;
+	width: 55vw;
+	background-color: $color-white-1;
+	border-radius: 10px;
+	box-shadow: $shadow-dark;
+}
+
+.container {
+	&--main {
+		height: 90%;
+		flex-basis: 70%;
+
+		&__header {
+			display: flex;
+			height: 10%;
+			justify-content: center;
+
+			&__text {
+				font-size: 4rem;
+				font-weight: 400;
+				font-style: italic;
+			}
+		}
+	}
+
+	&--options {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 90%;
+		flex-grow: 1;
+		border-left: $border-1;
+	}
+}
+
+.options {
+	&--main {
+		display: flex;
+		margin-top: 2rem;
+		flex-direction: column;
+	}
+
+	&--secondary {
+		display: flex;
+		margin-bottom: 2rem;
+		flex-direction: column;
+	}
+}
+
+.to-do-list {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+
+	height: 90%;
+	justify-content: center;
+	align-items: center;
+	font-size: 2.75rem;
+	color: $color-grey-2;
+}
+
+.new-to-do-popup {
+	display: flex;
+	opacity: 0;
+	position: absolute;
+	left: 50%;
+	height: 35vh;
+	width: 55vw;
+	transform: translateX(-50%);
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
+	box-shadow: $shadow-dark;
+	background-color: $color-white-1;
+
+	&__exit {
+		position: fixed;
+		top: 5%;
+		right: 2%;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 5rem;
+	}
+
+	&__label {
+		font-size: 3rem;
+		font-weight: 400;
+		font-style: italic;
+		margin-bottom: 3rem;
+	}
+
+	&__input {
+		border: $border-1;
+		border-radius: 10px;
+		height: 5rem;
+		width: 45vw;
+		padding: 0 2rem;
+		font-size: 2.2rem;
+	}
+}

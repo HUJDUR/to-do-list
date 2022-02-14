@@ -1,0 +1,45 @@
+$color-primary-blue: #4568dc;
+$color-primary-purple: #b06ab3;
+$color-grey-1: #cccccc;
+$color-grey-2: #999999;
+$color-grey-3: #333;
+// $color-grey-4: #ccccb8;
+$color-white-1: #fffafa;
+// $color-white-2: #ffede6;
+
+$shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+$shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+
+$border-1: 1px solid $color-grey-1;
+$border-2: 2px solid $color-grey-2;
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 1.6;
+	background-image: linear-gradient(
+		to right,
+		$color-primary-blue,
+		$color-primary-purple
+	);
+	height: 100vh;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+}
