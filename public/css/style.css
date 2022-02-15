@@ -101,10 +101,8 @@ body {
 
 .to-do-list {
   display: flex;
-  height: 100%;
   flex-direction: column;
   height: 90%;
-  justify-content: center;
   align-items: center;
   font-size: 2.75rem;
   color: #999999; }
