@@ -1,5 +1,5 @@
 import React from 'react';
-import Iteam from './ToDoIteam';
+import Iteam from './Iteam';
 
 const iteams = (props) => {
 	return props.iteams.map((el) => {

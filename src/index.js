@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import ToDoList from './components/containers/ToDoList';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<App />
+		<ToDoList />
 	</React.StrictMode>,
 	document.getElementById('application')
 );
