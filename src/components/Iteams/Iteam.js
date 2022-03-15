@@ -5,7 +5,12 @@ function iteam(props) {
 		<div className="to-do-list__element">
 			<h2 className="to-do-list__element__text">{props.task}</h2>
 
-			<button className="btn to-do-list__element__checkbox">X</button>
+			<button
+				className="btn to-do-list__element__checkbox"
+				onClick={props.chech}
+			>
+				X
+			</button>
 
 			{/* <div className="to-do-list__element__checkbox" data-listnumber="0">
 				<div className="to-do-list__element__checkbox__under"></div>

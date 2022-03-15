@@ -10,9 +10,17 @@ class ToDoList extends Component {
 			{ task: "Naucit jednu stranicu Kur'ana", finished: false },
 			{ task: 'Otic na poso', finished: false },
 		],
-		numberOfAllTasks: 2,
+		numberOfAllTasks: 0,
 		theme: 'light',
 	};
+
+	finishedItemsCheck() {
+		const itemsFromState = [...this.state.iteams];
+
+		for (let i = 0; i < itemsFromState.size; i++) {
+			if (itemsFromState[i].finished === false) delete itemsFromState[i];
+		}
+	}
 
 	render() {
 		return (
@@ -22,7 +30,10 @@ class ToDoList extends Component {
 						<h1 className="container--main__header__text">To Do List</h1>
 					</header>
 					<div className="to-do-list">
-						<Iteams iteams={this.state.iteams} />
+						<Iteams
+							iteams={this.state.iteams}
+							check={this.finishedItemsCheck}
+						/>
 					</div>
 				</div>
 
