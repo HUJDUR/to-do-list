@@ -6,7 +6,7 @@ const options = (props) => {
 			<div className="options--main">
 				<button className="btn btn--new-item popup">
 					New to-do item
-					<img src="img/icons/plus1.svg" alt="Plus icon" class="icon" />
+					<img src="img/icons/plus1.svg" alt="Plus icon" className="icon" />
 				</button>
 			</div>
 			<div className="options--secondary">

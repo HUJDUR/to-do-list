@@ -3,7 +3,14 @@ import Iteam from './Iteam';
 
 const iteams = (props) => {
 	return props.iteams.map((el) => {
-		return <Iteam task={el.task} finished={el.finished} check={props.check} />;
+		return (
+			<Iteam
+				key={props.numberOfAllTasks}
+				task={el.task}
+				finished={el.finished}
+				check={props.check}
+			/>
+		);
 	});
 };
 

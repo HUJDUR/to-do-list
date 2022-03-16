@@ -5,17 +5,20 @@ import Iteams from '../Iteams/Iteams';
 // import NewIteam from '../NewIteam';
 
 class ToDoList extends Component {
-	state = {
-		iteams: [
-			{ task: "Naucit jednu stranicu Kur'ana", finished: false },
-			{ task: 'Otic na poso', finished: false },
-		],
-		numberOfAllTasks: 0,
-		theme: 'light',
-	};
+	constructor(props) {
+		super(props);
+		this.state = {
+			iteams: [
+				{ task: "Naucit jednu stranicu Kur'ana", finished: false },
+				{ task: 'Otic na poso', finished: false },
+			],
+			numberOfAllTasks: 0,
+			theme: 'light',
+		};
+	}
 
 	finishedItemsCheck() {
-		const itemsFromState = [...this.state.iteams];
+		let itemsFromState = [...this.state.iteams];
 
 		for (let i = 0; i < itemsFromState.size; i++) {
 			if (itemsFromState[i].finished === false) delete itemsFromState[i];
@@ -32,7 +35,8 @@ class ToDoList extends Component {
 					<div className="to-do-list">
 						<Iteams
 							iteams={this.state.iteams}
-							check={this.finishedItemsCheck}
+							check={this.finishedItemsCheck.bind(this)}
+							numberOfAllTasks={this.state.numberOfAllTasks}
 						/>
 					</div>
 				</div>
