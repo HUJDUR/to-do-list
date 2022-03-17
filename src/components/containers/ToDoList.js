@@ -20,9 +20,14 @@ class ToDoList extends Component {
 	finishedItemsCheck() {
 		let itemsFromState = [...this.state.iteams];
 
-		for (let i = 0; i < itemsFromState.size; i++) {
-			if (itemsFromState[i].finished === false) delete itemsFromState[i];
+		for (let i = 0; i < itemsFromState.length; i++) {
+			if (!itemsFromState[i].finished) {
+				itemsFromState.splice(i - 1, 1);
+				console.log('yolo');
+			}
 		}
+
+		this.setState({ iteams: itemsFromState });
 	}
 
 	render() {
