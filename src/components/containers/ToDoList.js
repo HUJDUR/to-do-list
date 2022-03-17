@@ -9,15 +9,17 @@ class ToDoList extends Component {
 		super(props);
 		this.state = {
 			iteams: [
-				{ task: "Naucit jednu stranicu Kur'ana", finished: false },
-				{ task: 'Otic na poso', finished: false },
+				{ id: 1, task: "Naucit jednu stranicu Kur'ana", finished: false },
+				{ id: 2, task: 'Otic na poso', finished: false },
 			],
-			numberOfAllTasks: 0,
+			numberOfAllTasks: 2,
 			theme: 'light',
 		};
 	}
 
-	finishedItemsCheck() {
+	changingFinishedStatus(id) {}
+
+	finishedItemsCheck(id) {
 		let itemsFromState = [...this.state.iteams];
 
 		for (let i = 0; i < itemsFromState.length; i++) {
@@ -41,7 +43,6 @@ class ToDoList extends Component {
 						<Iteams
 							iteams={this.state.iteams}
 							check={this.finishedItemsCheck.bind(this)}
-							numberOfAllTasks={this.state.numberOfAllTasks}
 						/>
 					</div>
 				</div>

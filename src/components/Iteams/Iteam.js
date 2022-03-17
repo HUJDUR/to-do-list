@@ -7,7 +7,7 @@ function iteam(props) {
 
 			<button
 				className="btn to-do-list__element__checkbox"
-				onClick={props.check}
+				onClick={() => props.check(props.id)}
 			>
 				X
 			</button>

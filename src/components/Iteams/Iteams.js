@@ -5,7 +5,8 @@ const iteams = (props) => {
 	return props.iteams.map((el) => {
 		return (
 			<Iteam
-				// key={props.numberOfAllTasks}
+				key={el.id}
+				id={el.id}
 				task={el.task}
 				finished={el.finished}
 				check={props.check}
