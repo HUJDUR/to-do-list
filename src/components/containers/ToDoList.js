@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import Options from '../Options';
 import Aux from '../hoc/Auxiliary';
-import Iteams from '../Iteams/Iteams';
+import Items from '../Items/Items';
 // import NewIteam from '../NewIteam';
 
 class ToDoList extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			iteams: [
+			items: [
 				{ id: 1, task: "Naucit jednu stranicu Kur'ana", finished: false },
 				{ id: 2, task: 'Otic na poso', finished: false },
 			],
@@ -17,10 +17,17 @@ class ToDoList extends Component {
 		};
 	}
 
-	changingFinishedStatus(id) {}
+	changeFinishedStatus(id) {
+		const itemsFromState = [...this.state.items];
 
-	finishedItemsCheck(id) {
-		let itemsFromState = [...this.state.iteams];
+		for (let i = 0; i < itemsFromState.length; i++)
+			if (itemsFromState[i].id === id) itemsFromState[i].finished = true;
+
+		this.setState({ items: itemsFromState });
+	}
+
+	finishedItemsCheck() {
+		let itemsFromState = [...this.state.items];
 
 		for (let i = 0; i < itemsFromState.length; i++) {
 			if (!itemsFromState[i].finished) {
@@ -29,7 +36,7 @@ class ToDoList extends Component {
 			}
 		}
 
-		this.setState({ iteams: itemsFromState });
+		this.setState({ items: itemsFromState });
 	}
 
 	render() {
@@ -40,9 +47,9 @@ class ToDoList extends Component {
 						<h1 className="container--main__header__text">To Do List</h1>
 					</header>
 					<div className="to-do-list">
-						<Iteams
-							iteams={this.state.iteams}
-							check={this.finishedItemsCheck.bind(this)}
+						<Items
+							items={this.state.items}
+							check={this.changeFinishedStatus.bind(this)}
 						/>
 					</div>
 				</div>

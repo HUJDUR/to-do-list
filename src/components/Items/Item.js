@@ -1,6 +1,6 @@
 import React from 'react';
 
-function iteam(props) {
+function item(props) {
 	return (
 		<div className="to-do-list__element">
 			<h2 className="to-do-list__element__text">{props.task}</h2>
@@ -19,4 +19,4 @@ function iteam(props) {
 	);
 }
 
-export default iteam;
+export default item;

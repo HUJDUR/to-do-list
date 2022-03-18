@@ -1,8 +1,8 @@
 import React from 'react';
-import Iteam from './Iteam';
+import Iteam from './Item';
 
-const iteams = (props) => {
-	return props.iteams.map((el) => {
+const items = (props) => {
+	return props.items.map((el) => {
 		return (
 			<Iteam
 				key={el.id}
@@ -15,4 +15,4 @@ const iteams = (props) => {
 	});
 };
 
-export default iteams;
+export default items;
