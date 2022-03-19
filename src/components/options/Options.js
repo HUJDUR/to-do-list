@@ -1,6 +1,6 @@
 import React from 'react';
 
-const options = (props) => {
+const options = () => {
 	return (
 		<footer className="container--options">
 			<div className="options--main">

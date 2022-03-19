@@ -30,6 +30,10 @@
 }
 
 .to-do-list {
+	&__message {
+		margin-top: 3rem;
+	}
+
 	&__element {
 		display: flex;
 		justify-content: space-between;
