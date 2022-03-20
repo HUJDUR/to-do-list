@@ -1,3 +1,4 @@
+import { useSpring, animated } from 'react-spring';
 import React, { Component } from 'react';
 import Options from '../options/Options';
 import Aux from '../hoc/Auxiliary';
@@ -35,27 +36,29 @@ class ToDoList extends Component {
 	}
 
 	render() {
+		const items =
+			this.state.items.length > 0 ? (
+				<Items
+					items={this.state.items}
+					check={this.finishedIteamHandler.bind(this)}
+				/>
+			) : (
+				<p className="to-do-list__message">
+					There are no new to do list elements!
+				</p>
+			);
+
+		const popup = this.state.popup ? <NewIteam /> : null;
+
 		return (
 			<Aux>
-				<div className="container--main">
+				<div className="container--main ">
 					<header className="container--main__header">
 						<h1 className="container--main__header__text">To Do List</h1>
 					</header>
-					<div className="to-do-list">
-						{this.state.items.length > 0 ? (
-							<Items
-								items={this.state.items}
-								check={this.finishedIteamHandler.bind(this)}
-							/>
-						) : (
-							<p className="to-do-list__message">
-								There are no new to do list elements!
-							</p>
-						)}
-					</div>
+					<div className="to-do-list">{items}</div>
 				</div>
-
-				{this.state.popup ? <NewIteam /> : null}
+				{popup}
 				<Options popup={this.newIteamPopup.bind(this)} />
 			</Aux>
 		);

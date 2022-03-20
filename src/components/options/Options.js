@@ -2,7 +2,7 @@ import React from 'react';
 
 const options = (props) => {
 	return (
-		<footer className="container--options">
+		<footer className="container--options ">
 			<div className="options--main">
 				<button className="btn btn--new-item popup" onClick={props.popup}>
 					New to-do item
