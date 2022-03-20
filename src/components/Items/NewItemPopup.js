@@ -1,26 +1,26 @@
 const newIteam = () => {
 	return (
-		<div class="new-to-do-popup">
-			<button class="btn new-to-do-popup__exit popup">
-				<img src="/img/icons/x.svg" alt="Exit icon" class="icon" />
+		<div className="new-to-do-popup">
+			<button className="btn new-to-do-popup__exit popup">
+				<img src="/img/icons/x.svg" alt="Exit icon" className="icon" />
 			</button>
 
-			<form class="new-to-do-popup__form">
-				<label for="new-list-element" class="new-to-do-popup__label">
+			<form className="new-to-do-popup__form">
+				<label htmlFor="new-list-element" className="new-to-do-popup__label">
 					New To Do List Element
 				</label>
 				<input
 					type="text"
-					class="new-to-do-popup__input"
+					className="new-to-do-popup__input"
 					name="new-list-element"
 				/>
 			</form>
-			<button class="btn btn--add-element">
+			<button className="btn btn--add-element">
 				Add element
 				<img
 					src="img/icons/plus2.svg"
 					alt="Plus icon"
-					class="icon icon--add-element"
+					className="icon icon--add-element"
 				/>
 			</button>
 		</div>

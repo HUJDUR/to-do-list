@@ -1,10 +1,10 @@
 import React from 'react';
 
-const options = () => {
+const options = (props) => {
 	return (
 		<footer className="container--options">
 			<div className="options--main">
-				<button className="btn btn--new-item popup">
+				<button className="btn btn--new-item popup" onClick={props.popup}>
 					New to-do item
 					<img src="img/icons/plus1.svg" alt="Plus icon" className="icon" />
 				</button>

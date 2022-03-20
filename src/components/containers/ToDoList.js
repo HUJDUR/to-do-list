@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Options from '../options/Options';
 import Aux from '../hoc/Auxiliary';
 import Items from '../Items/Items';
-// import NewIteam from '../NewIteam';
+import NewIteam from '../Items/NewItemPopup';
 
 class ToDoList extends Component {
 	constructor(props) {
@@ -14,6 +14,7 @@ class ToDoList extends Component {
 			],
 			numberOfAllTasks: 2,
 			theme: 'light',
+			popup: false,
 		};
 	}
 
@@ -26,7 +27,12 @@ class ToDoList extends Component {
 		this.setState({ items: itemsFromState });
 	}
 
-	newIteamPopup() {}
+	newIteamPopup() {
+		let popupFromState = !this.state.popup;
+
+		this.setState({ popup: popupFromState });
+		console.log(this.state.popup);
+	}
 
 	render() {
 		return (
@@ -49,8 +55,8 @@ class ToDoList extends Component {
 					</div>
 				</div>
 
-				{/* <NewIteam /> */}
-				<Options />
+				{this.state.popup ? <NewIteam /> : null}
+				<Options popup={this.newIteamPopup.bind(this)} />
 			</Aux>
 		);
 	}
