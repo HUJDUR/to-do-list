@@ -27,6 +27,12 @@
 		width: 1.7rem;
 		margin-left: 0.5rem;
 	}
+
+	&--exit {
+		height: 2.2rem;
+		width: 2.2rem;
+		margin-left: 0;
+	}
 }
 
 .to-do-list {
@@ -63,4 +69,8 @@
 			border-radius: 1rem;
 		}
 	}
+}
+
+.blur {
+	filter: blur(3px);
 }

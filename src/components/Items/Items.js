@@ -1,7 +1,7 @@
 import React from 'react';
 import Iteam from './Item';
 
-const items = (props) => {
+const Items = (props) => {
 	return props.items.map((el) => {
 		return (
 			<Iteam
@@ -9,10 +9,10 @@ const items = (props) => {
 				id={el.id}
 				task={el.task}
 				finished={el.finished}
-				check={props.check}
+				finishedHandler={props.finishedHandler}
 			/>
 		);
 	});
 };
 
-export default items;
+export default Items;

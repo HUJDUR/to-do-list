@@ -1,8 +1,16 @@
-const newIteam = () => {
+import { useSpring, animated } from 'react-spring';
+
+const NewIteam = (props) => {
+	const animatedStyle = useSpring({ to: { opacity: 1 }, from: { opacity: 0 } });
 	return (
-		<div className="new-to-do-popup">
+		<div className="new-to-do-popup" style={animatedStyle}>
 			<button className="btn new-to-do-popup__exit popup">
-				<img src="/img/icons/x.svg" alt="Exit icon" className="icon" />
+				<img
+					src="/img/icons/x.svg"
+					alt="Exit icon"
+					className="icon--exit"
+					onClick={props.exitHandler}
+				/>
 			</button>
 
 			<form className="new-to-do-popup__form">
@@ -27,4 +35,4 @@ const newIteam = () => {
 	);
 };
 
-export default newIteam;
+export default NewIteam;
