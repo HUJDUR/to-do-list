@@ -31,6 +31,8 @@ class ToDoList extends Component {
 		this.setState({ popup: popupFromState });
 	}
 
+	newIteamUpdate() {}
+
 	// Render method
 
 	render() {
@@ -49,7 +51,10 @@ class ToDoList extends Component {
 			);
 
 		const popup = this.state.popup ? (
-			<NewIteam exitHandler={this.newIteamPopup.bind(this)} />
+			<NewIteam
+				exitHandler={this.newIteamPopup.bind(this)}
+				popupState={this.state.popup}
+			/>
 		) : null;
 
 		// Return

@@ -1,7 +1,10 @@
 import { useSpring, animated } from 'react-spring';
 
 const NewIteam = (props) => {
-	const animatedStyle = useSpring({ to: { opacity: 1 }, from: { opacity: 0 } });
+	const animatedStyle = useSpring({
+		from: { opacity: !props.popupState ? 1 : 0 },
+		to: { opacity: props.popupState ? 1 : 0 },
+	});
 	return (
 		<animated.div className="new-to-do-popup" style={animatedStyle}>
 			<button className="btn new-to-do-popup__exit popup">
