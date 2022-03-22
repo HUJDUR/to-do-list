@@ -3,7 +3,7 @@ import { useSpring, animated } from 'react-spring';
 const NewIteam = (props) => {
 	const animatedStyle = useSpring({ to: { opacity: 1 }, from: { opacity: 0 } });
 	return (
-		<div className="new-to-do-popup" style={animatedStyle}>
+		<animated.div className="new-to-do-popup" style={animatedStyle}>
 			<button className="btn new-to-do-popup__exit popup">
 				<img
 					src="/img/icons/x.svg"
@@ -31,7 +31,7 @@ const NewIteam = (props) => {
 					className="icon icon--add-element"
 				/>
 			</button>
-		</div>
+		</animated.div>
 	);
 };
 
