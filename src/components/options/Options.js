@@ -16,14 +16,6 @@ const Options = (props) => {
 			</div>
 			<div className="options--secondary">
 				<button className="btn btn--new-item">
-					Options
-					<img
-						src="img/icons/options.svg"
-						alt="Options icon"
-						className="icon"
-					/>
-				</button>
-				<button className="btn btn--new-item">
 					Change theme
 					<img
 						src="img/icons/moon.svg"

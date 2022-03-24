@@ -6,11 +6,8 @@ import NewIteam from '../Items/NewItemPopup';
 
 class ToDoList extends Component {
 	state = {
-		items: [
-			{ id: 0, task: "Naucit jednu stranicu Kur'ana" },
-			{ id: 1, task: 'Otic na poso' },
-		],
-		numberOfAllTasks: 2,
+		items: [],
+		numberOfAllTasks: 0,
 		theme: 'light',
 		popup: false,
 	};
@@ -32,13 +29,15 @@ class ToDoList extends Component {
 	}
 
 	newIteamUpdate(textValue) {
-		const oldStateItems = [...this.state.items];
-		const newToDoItem = { id: this.numberOfAllTasks, task: textValue };
-		const newStateItems = oldStateItems.push(newToDoItem);
+		let numberOfAllTasks = this.state.numberOfAllTasks;
+		const newToDoItem = { id: numberOfAllTasks, task: textValue };
+		const newStateItems = [...this.state.items, newToDoItem];
 
-		this.setState({ items: newStateItems });
-		this.numberOfAllTasks++;
+		numberOfAllTasks++;
+
+		this.setState({ items: newStateItems, numberOfAllTasks });
 		this.newIteamPopup();
+		console.log(newStateItems);
 	}
 
 	render() {
