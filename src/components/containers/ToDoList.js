@@ -31,9 +31,15 @@ class ToDoList extends Component {
 		this.setState({ popup: popupFromState });
 	}
 
-	newIteamUpdate() {}
+	newIteamUpdate(textValue) {
+		const oldStateItems = [...this.state.items];
+		const newToDoItem = { id: this.numberOfAllTasks, task: textValue };
+		const newStateItems = oldStateItems.push(newToDoItem);
 
-	// Render method
+		this.setState({ items: newStateItems });
+		this.numberOfAllTasks++;
+		this.newIteamPopup();
+	}
 
 	render() {
 		// Variables used in the return of the redner method
@@ -50,13 +56,6 @@ class ToDoList extends Component {
 				</p>
 			);
 
-		const popup = this.state.popup ? (
-			<NewIteam
-				exitHandler={this.newIteamPopup.bind(this)}
-				popupState={this.state.popup}
-			/>
-		) : null;
-
 		// Return
 
 		return (
@@ -67,7 +66,11 @@ class ToDoList extends Component {
 					</header>
 					<div className="to-do-list">{items}</div>
 				</div>
-				{popup}
+				<NewIteam
+					exitHandler={this.newIteamPopup.bind(this)}
+					popupState={this.state.popup}
+					newItemHandler={this.newIteamUpdate.bind(this)}
+				/>
 				<Options
 					popupHandler={this.newIteamPopup.bind(this)}
 					popupState={this.state.popup}

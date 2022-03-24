@@ -109,7 +109,6 @@ body {
 
 .new-to-do-popup {
   display: flex;
-  opacity: 1;
   position: absolute;
   left: -9%;
   top: 30%;

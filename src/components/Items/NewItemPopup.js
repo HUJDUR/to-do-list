@@ -2,6 +2,8 @@ import { useTransition, animated } from 'react-spring';
 import Aux from '../hoc/Auxiliary';
 
 const NewIteam = (props) => {
+	const element = document.querySelector('.new-to-do-popup__input');
+
 	const transition = useTransition(props.popupState, {
 		from: { opacity: 0 },
 		enter: { opacity: 1 },
@@ -9,7 +11,7 @@ const NewIteam = (props) => {
 	});
 	return (
 		<Aux>
-			{transition((style, item) => {
+			{transition((style, item) =>
 				item ? (
 					<animated.div className="new-to-do-popup" style={style}>
 						<button className="btn new-to-do-popup__exit popup">
@@ -34,7 +36,10 @@ const NewIteam = (props) => {
 								name="new-list-element"
 							/>
 						</form>
-						<button className="btn btn--add-element">
+						<button
+							className="btn btn--add-element"
+							onClick={() => props.newItemHandler(element.value)}
+						>
 							Add element
 							<img
 								src="img/icons/plus2.svg"
@@ -43,8 +48,8 @@ const NewIteam = (props) => {
 							/>
 						</button>
 					</animated.div>
-				) : null;
-			})}
+				) : null
+			)}
 		</Aux>
 	);
 };
