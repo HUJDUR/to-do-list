@@ -34,18 +34,19 @@ const NewIteam = (props) => {
 								type="text"
 								className="new-to-do-popup__input"
 								name="new-list-element"
+								autoFocus
 							/>
 						</form>
 						<button
 							className="btn btn--add-element"
 							onClick={() => props.newItemHandler(element.value)}
 						>
-							Add element
-							<img
+							Add element!
+							{/* <img
 								src="img/icons/plus2.svg"
 								alt="Plus icon"
 								className="icon icon--add-element"
-							/>
+							/> */}
 						</button>
 					</animated.div>
 				) : null

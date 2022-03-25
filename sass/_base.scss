@@ -43,3 +43,16 @@ body {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 400;
 }
+
+::-webkit-scrollbar {
+	height: 0.4rem;
+	width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+	background: none;
+}
+
+::-webkit-scrollbar-thumb {
+	background: $color-grey-3;
+}

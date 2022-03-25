@@ -21,6 +21,16 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400; }
 
+::-webkit-scrollbar {
+  height: 0.4rem;
+  width: 1rem; }
+
+::-webkit-scrollbar-track {
+  background: none; }
+
+::-webkit-scrollbar-thumb {
+  background: #333; }
+
 @keyframes popup {
   0% {
     opacity: 0;
@@ -154,7 +164,11 @@ body {
     color: #333; }
   .btn--add-element {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    border: 2px solid #999999;
+    border-radius: 1rem; }
 
 .icon {
   height: 2.2rem;
@@ -187,7 +201,8 @@ body {
   .to-do-list__element__text {
     color: #333;
     font-size: 2.7rem;
-    font-weight: 400; }
+    font-weight: 400;
+    overflow: scroll; }
   .to-do-list__element__checkbox {
     padding: 0.5rem;
     border: 1px solid #cccccc;
