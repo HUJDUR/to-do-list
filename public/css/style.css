@@ -137,8 +137,7 @@ body {
   .new-to-do-popup__form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-bottom: 5rem; }
+    align-items: center; }
   .new-to-do-popup__label {
     font-size: 3rem;
     font-weight: 400;
@@ -163,8 +162,7 @@ body {
     font-size: 2rem;
     color: #333; }
   .btn--add-element {
-    display: flex;
-    align-items: center;
+    margin-top: 4rem;
     font-size: 2rem;
     padding: 1rem 2rem;
     border: 2px solid #999999;

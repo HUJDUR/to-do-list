@@ -23,7 +23,10 @@ const NewIteam = (props) => {
 							/>
 						</button>
 
-						<form className="new-to-do-popup__form">
+						<form
+							className="new-to-do-popup__form"
+							onSubmit={(e) => props.newItemHandler(e, element.value)}
+						>
 							<label
 								htmlFor="new-list-element"
 								className="new-to-do-popup__label"
@@ -36,18 +39,14 @@ const NewIteam = (props) => {
 								name="new-list-element"
 								autoFocus
 							/>
+							<button
+								type="submit"
+								className="btn btn--add-element"
+								// onClick={}
+							>
+								Add element!
+							</button>
 						</form>
-						<button
-							className="btn btn--add-element"
-							onClick={() => props.newItemHandler(element.value)}
-						>
-							Add element!
-							{/* <img
-								src="img/icons/plus2.svg"
-								alt="Plus icon"
-								className="icon icon--add-element"
-							/> */}
-						</button>
 					</animated.div>
 				) : null
 			)}

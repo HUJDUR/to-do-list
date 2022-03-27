@@ -13,6 +13,11 @@ class ToDoList extends Component {
 	};
 
 	// Handlers
+
+	onSubmit(event) {
+		event.preventDefault();
+	}
+
 	finishedIteamHandler(id) {
 		const itemsFromState = [...this.state.items];
 
@@ -28,7 +33,9 @@ class ToDoList extends Component {
 		this.setState({ popup: popupFromState });
 	}
 
-	newIteamUpdate(textValue) {
+	newIteamUpdate(e, textValue) {
+		e.preventDefault();
+
 		let numberOfAllTasks = this.state.numberOfAllTasks;
 		const newToDoItem = { id: numberOfAllTasks, task: textValue };
 		const newStateItems = [...this.state.items, newToDoItem];
@@ -69,6 +76,7 @@ class ToDoList extends Component {
 					exitHandler={this.newIteamPopup.bind(this)}
 					popupState={this.state.popup}
 					newItemHandler={this.newIteamUpdate.bind(this)}
+					onSubmit={this.onSubmit}
 				/>
 				<Options
 					popupHandler={this.newIteamPopup.bind(this)}
