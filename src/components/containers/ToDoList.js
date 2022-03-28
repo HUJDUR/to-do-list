@@ -44,7 +44,6 @@ class ToDoList extends Component {
 
 		this.setState({ items: newStateItems, numberOfAllTasks });
 		this.newIteamPopup();
-		console.log(newStateItems);
 	}
 
 	render() {
@@ -66,7 +65,9 @@ class ToDoList extends Component {
 
 		return (
 			<Aux>
-				<div className={`container--main ${this.state.popup ? 'blur' : null}`}>
+				<div
+					className={`container--main ${this.state.popup ? 'blur' : null} dark`}
+				>
 					<header className="container--main__header">
 						<h1 className="container--main__header__text">To Do List</h1>
 					</header>

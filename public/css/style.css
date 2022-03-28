@@ -208,3 +208,7 @@ body {
 
 .blur {
   filter: blur(3px); }
+
+.dark {
+  background-color: #1b1b1b;
+  color: #fffafa; }

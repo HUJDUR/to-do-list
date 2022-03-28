@@ -3,7 +3,7 @@ import React from 'react';
 const Options = (props) => {
 	return (
 		<footer
-			className={`container--options ${props.popupState ? 'blur' : null}`}
+			className={`container--options ${props.popupState ? 'blur' : null} dark`}
 		>
 			<div className="options--main">
 				<button

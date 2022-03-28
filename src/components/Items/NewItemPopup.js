@@ -9,11 +9,12 @@ const NewIteam = (props) => {
 		enter: { opacity: 1 },
 		leave: { opacity: 0 },
 	});
+
 	return (
 		<Aux>
 			{transition((style, item) =>
 				item ? (
-					<animated.div className="new-to-do-popup" style={style}>
+					<animated.div className="new-to-do-popup dark" style={style}>
 						<button className="btn new-to-do-popup__exit popup">
 							<img
 								src="/img/icons/x.svg"
