@@ -65,9 +65,7 @@ class ToDoList extends Component {
 
 		return (
 			<Aux>
-				<div
-					className={`container--main ${this.state.popup ? 'blur' : null} dark`}
-				>
+				<div className={`container--main ${this.state.popup ? 'blur' : null}`}>
 					<header className="container--main__header">
 						<h1 className="container--main__header__text">To Do List</h1>
 					</header>

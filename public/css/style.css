@@ -153,7 +153,7 @@ body {
 
 .btn {
   border: none;
-  background-color: #fffafa;
+  background-color: inherit;
   cursor: pointer; }
   .btn--new-item {
     display: flex;
