@@ -5,9 +5,12 @@
 	align-items: center;
 	height: 80vh;
 	width: 55vw;
-	background-color: $color-white-1;
+	// background-color: $color-white-1;
 	border-radius: 10px;
 	box-shadow: $shadow-dark;
+
+	background-color: #1b1b1b;
+	color: $color-white-1;
 }
 
 .container {
