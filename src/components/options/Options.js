@@ -15,7 +15,7 @@ const Options = (props) => {
 				</button>
 			</div>
 			<div className="options--secondary">
-				<button className="btn btn--new-item">
+				<button className="btn btn--new-item" onClick={props.themeHandler}>
 					Change theme
 					<img
 						src="img/icons/moon.svg"

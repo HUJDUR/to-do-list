@@ -75,10 +75,9 @@ body {
   align-items: center;
   height: 80vh;
   width: 55vw;
+  background-color: #fffafa;
   border-radius: 10px;
-  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-  background-color: #1b1b1b;
-  color: #fffafa; }
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3); }
 
 .container--main {
   height: 90%;

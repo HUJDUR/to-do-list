@@ -4,11 +4,13 @@ import Aux from '../hoc/Auxiliary';
 import Items from '../Items/Items';
 import NewIteam from '../Items/NewItemPopup';
 
+const applicationElement = document.querySelector('.application');
+
 class ToDoList extends Component {
 	state = {
 		items: [],
 		numberOfAllTasks: 0,
-		theme: 'light',
+		darkTheme: false,
 		popup: false,
 	};
 
@@ -46,6 +48,13 @@ class ToDoList extends Component {
 		this.newIteamPopup();
 	}
 
+	themeHandler() {
+		const isDarkModeEnabled = this.state.darkTheme;
+		this.setState({ darkTheme: !isDarkModeEnabled });
+
+		applicationElement.classList.toggle('dark');
+	}
+
 	render() {
 		// Variables used in the return of the redner method
 
@@ -80,6 +89,7 @@ class ToDoList extends Component {
 				<Options
 					popupHandler={this.newIteamPopup.bind(this)}
 					popupState={this.state.popup}
+					themeHandler={this.themeHandler.bind(this)}
 				/>
 			</Aux>
 		);

@@ -14,7 +14,7 @@ const NewIteam = (props) => {
 		<Aux>
 			{transition((style, item) =>
 				item ? (
-					<animated.div className="new-to-do-popup dark" style={style}>
+					<animated.div className="new-to-do-popup" style={style}>
 						<button className="btn new-to-do-popup__exit popup">
 							<img
 								src="/img/icons/x.svg"
