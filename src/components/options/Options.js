@@ -6,10 +6,7 @@ const Options = (props) => {
 			className={`container--options ${props.popupState ? 'blur' : null}`}
 		>
 			<div className="options--main">
-				<button
-					className="btn btn--new-item popup"
-					onClick={props.popupHandler}
-				>
+				<button className="btn btn--new-item" onClick={props.popupHandler}>
 					New to-do item
 					<img src="img/icons/plus1.svg" alt="Plus icon" className="icon" />
 				</button>

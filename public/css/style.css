@@ -156,7 +156,8 @@ body {
 .btn {
   border: none;
   background-color: inherit;
-  cursor: pointer; }
+  cursor: pointer;
+  color: inherit; }
   .btn--new-item {
     display: flex;
     justify-content: center;
