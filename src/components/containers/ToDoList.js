@@ -56,7 +56,7 @@ class ToDoList extends Component {
 	}
 
 	render() {
-		// Variables used in the return of the redner method
+		// Variables used in the return of the render method
 
 		const items =
 			this.state.items.length > 0 ? (

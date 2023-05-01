@@ -11,7 +11,7 @@ const Options = (props) => {
 					<img src="img/icons/plus1.svg" alt="Plus icon" className="icon" />
 				</button>
 			</div>
-			<div className="options--secondary">
+			{/* <div className="options--secondary">
 				<button className="btn btn--new-item" onClick={props.themeHandler}>
 					Change theme
 					<img
@@ -20,7 +20,7 @@ const Options = (props) => {
 						className="icon"
 					/>
 				</button>
-			</div>
+			</div> */}
 		</footer>
 	);
 };
