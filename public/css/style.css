@@ -130,6 +130,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   z-index: 10;
+  background-color: #fffafa;
   background-color: #1b1b1b;
   color: #fffafa; }
   .new-to-do-popup__exit {
